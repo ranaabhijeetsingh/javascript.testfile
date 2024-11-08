@@ -64,7 +64,7 @@ userSchema.methods.ispasswordCorrect = async function (password) {
 }
 
 userSchema.methods.genrateAccessToken = function(){
-    jwt.sigh(
+   return jwt.sigh(
         {
             _id:this._id,
             email: this.email,
@@ -80,7 +80,7 @@ userSchema.methods.genrateAccessToken = function(){
 }
 
 userSchema.methods.genrateRefreahToken = function(){
-    jwt.sigh(
+  return  jwt.sigh(
         {
             _id:this._id,
             email: this.email,
